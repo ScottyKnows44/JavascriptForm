@@ -17,6 +17,24 @@
             &nbsp;&nbsp;&nbsp;
             <input type="text" placeholder="House Number" id="houseNumber" />
             <br></br>
+            &nbsp;&nbsp;&nbsp;
+            <select>
+                <option disabled selected value> -- select a conuntry --</option>
+                <option value="Narnia">Narnia</option>
+                <option value="Neverland">NeverLand</option>
+                <option value="Vulcan">Vulcan</option>
+            </select>
+            <br></br>
+            <input type="password" placeholder="Enter password" id="password" /> &nbsp;&nbsp;&nbsp;
+            <input type="password" placeholder="Enter password {check}" id="passwordCheck" />
+            <br></br>
+            <input type="checkbox" id="newsletter" />Send me monthly newsletter
+            <br><br>
+            <span>What is your question?</span>
+            <br>
+            <textarea id="question" rows="4" ></textarea>
+            <br></br>
+            <button onclick="sendContact();">Send contact</button>
         </form>
         <script src="./lib/script.js"></script>
     </body>
