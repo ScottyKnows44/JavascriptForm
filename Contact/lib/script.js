@@ -33,11 +33,7 @@ function isNumber(num){
 
 function isEmail(email) {
     let regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-    if(regex.test(String(email).toLowerCase()) === false){
-        fields.email.className = 'placeholderRed';
-    }
-
-    return true;
+    return regex.test(String(email).toLowerCase());
 }
 
 function isPasswordValid(password){
@@ -46,14 +42,14 @@ function isPasswordValid(password){
 
 function fieldValidation(field, validFunction){
     if(field == null) return false;
-
     let isFieldValid = validFunction(field.value);
 
-    if(isFieldValid){
+    if(!isFieldValid){
         field.className = 'placeholderRed';
     } else{
         field.className = '';
     }
+
     return isFieldValid;
 }
 
@@ -97,13 +93,13 @@ class User {
 }
 
 function sendContact(){
-fields.gender = getGender();
+    fields.gender = getGender();
     if(isValid()){
-        let usr = new User(firstName.value, lastName.value, fields.gender, address.value, country.value, newsletter.checked);
-        console.log(usr);
-        alert(`Thanks ${usr.firstName} for registering.`);
+        let user = new User(fields.firstName, fields.lastName, fields.gender, fields.address, fields.country, fields.email, fields.newsletter, fields.question);
+        console.log(user);
+        alert(`Thanks for Registering ${user.firstName}`);
     } else{
-        alert("There was an error");
+        alert("Please fix the missing issues");
     }
 
 }
