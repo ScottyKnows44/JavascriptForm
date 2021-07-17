@@ -1,0 +1,31 @@
+.drink{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    align-self: center;
+    margin-bottom: 1rem;
+}
+
+.ingredients{
+    margin-top: 5px;
+
+}
+
+li{
+    text-align: center;
+}
+
+#name{
+    font-size: x-large;
+}
+
+ul{
+   
+    padding: 0;
+    list-style-type: none;
+}
+
