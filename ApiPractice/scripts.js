@@ -27,6 +27,14 @@ window.onload = async function getDrinks() {
         contentForList.appendChild(listItem);
       }   
     }
+    let url = document.createElement("a");
+    url.href = "drink.html";
+    url.onclick = (() =>{
+      localStorage.setItem('drink', JSON.stringify(data.drinks[i])); 
+    })
+    let urlText = document.createTextNode("Learn How To Make");
+    url.append(urlText);
+    contentForList.append(url);
     list.append(contentForList);
   }
   return data;

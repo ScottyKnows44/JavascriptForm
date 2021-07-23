@@ -1,6 +1,10 @@
 .drink{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px;
+    
+}
+
+#header{
+    text-align: center;
 }
 
 img{
@@ -17,15 +21,17 @@ img{
 
 li{
     text-align: center;
+    width: 250px;
 }
 
 #name{
-    font-size: x-large;
+    font-size: large;
 }
 
 ul{
-   
-    padding: 0;
     list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 
