@@ -2,6 +2,7 @@ const chatForm = document.getElementById("chat-form");
 const chatMessages = document.querySelector('.chat-messages');
 const userList = document.getElementById("users");
 const roomName = document.getElementById("room-name");
+
 //Get username and room from URL using the script tag from https://cdnjs.com
 const {username, room} = Qs.parse(location.search, {
     ignoreQueryPrefix: true
