@@ -1,6 +1,6 @@
 #container{
     width: 700px;
-    height: 450px;
+    height: 600px;
     margin: 70px auto;
     border: 2px solid rgb(125, 181,66);
 }
@@ -11,8 +11,9 @@
 
  #projects {
      width: 650px;
-     height: 250px;
+     height: 350px;
      margin: 0px auto;
+     overflow-y: auto;
  }
 
  ol li {
@@ -31,6 +32,20 @@
     margin-bottom: 20px;
 }
 
+#btnAddList{
+    margin-top: 3rem;
+    margin-left: 1.2rem;
+}
+
 #project-dialog{
+    display: none;
+}
+
+#removebtn{
+    margin-top: 3rem;
+    margin-left: 1rem;
+}
+
+#task-dialog {
     display: none;
 }

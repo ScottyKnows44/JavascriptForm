@@ -16,20 +16,31 @@
                     <li><a href="#personal">Personal</a></li>
                     <li><a href="#work">Work</a></li>
                 </ul>
-                <ol id="personal">
-                    <li><input type="checkbox">Doctor Appointment</li>
-                    <li><input type="checkbox">Call The Plumber</li>
-                </ol>
-                <ol id="work">
-                    <li><input type="checkbox">Complete test case document</li>
-                    <li><input type="checkbox">Meet project manager</li>
-                    <li><input type="checkbox">Record jQuery video</li>
-                </ol>
+                <div id="projectLists">
+                    <ol id="personal">
+                        <li><input name="personal" value="Doctor Appointment" type="checkbox">Doctor Appointment</li>
+                        <li><input name="personal"  value="Call The Plumber" type="checkbox">Call The Plumber</li>
+                    </ol>
+                    <ol id="work">
+                        <li><input name="work" value="Complete test case document" type="checkbox">Complete test case document</li>
+                        <li><input name="work" value="Meet project manager" type="checkbox">Meet project manager</li>
+                        <li><input name="work" value="Record jQuery video" type="checkbox">Record jQuery video</li>
+                    </ol>
+                </div>
             </div>
             <div id="project-dialog" title="Add a project">
                 <label for="new-project" >Project name:</label>
                 <input id="new-project" type="text" />
             </div>
+            <div id="task-dialog" title="Add To List">
+                <label for="new-task" >Task to add:</label>
+                <input id="new-task" type="text" />
+            </div>
+            <div>
+                <button id="btnAddList">Add To List</button> 
+                <button id="removebtn">Remove Selected</button>
+            </div>
+               
         </div>
     </body>
 </html>

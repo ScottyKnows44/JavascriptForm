@@ -26,4 +26,34 @@ $(document).ready(()=>{
             }
         });
     });
+    $("#btnAddList").button()
+        .click(() =>{
+            $("#task-dialog").dialog({
+                width: 400, resizable: false, modal: true,
+                buttons:{
+                    "Add New Task": () =>{
+                
+                        var selectedTab = $("#projects .ui-tabs-panel:visible").attr("id");
+                        var value =    $("#new-task").val();
+                        $("<li><input type=\"checkbox\" value=" + value + " name=" + selectedTab + ">" + value +"</li>")
+                        .appendTo("#" + selectedTab);
+                        
+                        $("#new-task").val("");
+                        $("#task-dialog").dialog("close");
+                    },
+                    "Cancel": () => {
+                        $("#new-task").val("");
+                        $("#task-dialog").dialog("close");
+                    }
+                }
+            })
+        }
+    );
+    $("#removebtn").button()
+    .click(() =>{
+        var selectedTab = $("#projects .ui-tabs-panel:visible").attr("id");
+        $.each($("li input[name=" + selectedTab +  "]:checked"), function(){
+            $(this).parent('li').remove();
+        });
+    });
 });
