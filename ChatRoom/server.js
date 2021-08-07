@@ -28,14 +28,17 @@ const chatRoomSchema = {
     name: String,
     password: String
 }
-
+const messageSchema = {
+    message: String,
+    date: String,
+    user: String
+}
 const User = mongoose.model("User", chatRoomSchema);
+const Message = mongoose.model("Message", messageSchema);
 
 //run when a client connents
 io.on('connection', socket => {
-    
     socket.on('joinRoom', ({username, room}) => {
-
         const user = userJoin(socket.id, username, room);
         socket.join(user.room)
 
@@ -55,7 +58,14 @@ io.on('connection', socket => {
     //listen for chat message
     socket.on('chatMessage', (msg) => {
         const user = getCurrentUser(socket.id);
-        io.to(user.room).emit('message', formatMessage(user.username, msg));
+        let object = formatMessage(user.username, msg);
+        let newMessage =  new Message({
+            message: object.text,
+            date: object.time,
+            user: object.username
+        });
+        newMessage.save();
+        io.to(user.room).emit('message', object);
     });
 
       //when a user disconnents
@@ -71,17 +81,13 @@ io.on('connection', socket => {
             });
         }
     });
-
 });
-
 
 app.post("/login.html", function(req, res) {
     let newLogin =  new User({
         name: req.body.name,
         password: req.body.password
     });
-    console.log(req.body.name);
-    console.log(req.body.password);
     newLogin.save();	
     res.redirect('/index.html');
 });

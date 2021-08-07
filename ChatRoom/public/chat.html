@@ -23,10 +23,11 @@
       <div class="chat-messages"></div>
     </main>
     <div class="chat-form-container">
-      <form id="chat-form">
+      <form id="chat-form" method="post" action="chat.html">
         <input
           id="msg"
           type="text"
+          name="message"
           placeholder="Enter Message"
           required
           autocomplete="off"
