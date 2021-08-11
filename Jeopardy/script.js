@@ -24,13 +24,13 @@ const array = [
         points: 100,
         answered: false
     },  {
-        question: "Who did the Chargers pick in the second round of the 2015 NFL draft?",
-        answer: "Denzel Perryman",
+        question: "What wide receiver caused a sensation his rookie season with a one-handed catch in 2014?",
+        answer: "Odell Beckham Jr",
         category: "Miscellaneous",
         points: 100,
         answered: false
     },  {
-        question: "Who is the most recent first overall pick to win Rookie of the Year?",
+        question: "In 2015 this player became the most recent first overall pick to win Rookie of the Year? ",
         answer: "Cam Newton",
         category: "Draft",
         points: 200,
@@ -60,7 +60,7 @@ const array = [
         points: 200,
         answered: false
     },  {
-        question: "The Falcons traded three picks and a player to the Chargers in 2001 for a first-round pick. Which player did they draft?",
+        question: "The Falcons traded three picks and a player to the Chargers in 2001 for a first overall pick. Which player did they draft?",
         answer: "Michael Vick",
         category: "Draft",
         points: 300,
@@ -84,8 +84,8 @@ const array = [
         points: 300,
         answered: false
     },  {
-        question: "Vontae Davis led the Dolphins in what category in 2011?",
-        answer: "Interceptions",
+        question: "Which NFL team has played in both the AFC and NFC Championship Games?",
+        answer: "Seattle Seahawks",
         category: "Miscellaneous",
         points: 300,
         answered: false
@@ -121,7 +121,7 @@ const array = [
         answered: false
     },  {
         question: "Who is the last defensive player taken No. 1 in the NFL Draft to be inducted into the Pro Football Hall of Fame?",
-        answer: "Bruce Smith. The Bills selected Bruce Smith with the No. 1 pick in 1985. Smith was inducted into the Pro Football Hall of Fame in 2009.",
+        answer: "Bruce Smith",
         category: "Draft",
         points: 500,
         answered: false
@@ -144,8 +144,8 @@ const array = [
         points: 500,
         answered: false
     },  {
-        question: "Who was the Baltimore Ravens' backup quarterback for Joe Flacco in the 2011 NFL season?",
-        answer: "Tyrod Taylor",
+        question: "Which Titans WR was tackled one yard short of a potential game-tying TD in Super Bowl XXXIV?",
+        answer: "Kevin Dyson",
         category: "Miscellaneous",
         points: 500,
         answered: false
